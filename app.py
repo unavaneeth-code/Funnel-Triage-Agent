@@ -186,9 +186,13 @@ if uploaded_file:
         with st.spinner("Analyzing pipeline..."):
             try:
                 result = analyze_deals(df, api_key)
+                st.session_state["triage_result"] = result
             except Exception as e:
                 st.error(f"Analysis failed: {e}")
                 st.stop()
+
+    if "triage_result" in st.session_state:
+        result = st.session_state["triage_result"]
 
         # Summary metrics
         s = result["summary"]
