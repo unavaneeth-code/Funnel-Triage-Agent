@@ -19,16 +19,6 @@ st.markdown("""
         text-align: center; margin-top: 1rem;
     }
     .sub-header { color: #b8b8d4; font-size: 1.1rem; text-align: center; margin-bottom: 2rem; }
-    .upload-zone {
-        background: linear-gradient(135deg, #1a1a3e, #2d2b55);
-        border: 2px dashed #667eea;
-        border-radius: 16px; padding: 3rem; text-align: center;
-        margin: 2rem auto; max-width: 600px;
-        transition: all 0.3s ease;
-    }
-    .upload-zone:hover { border-color: #764ba2; box-shadow: 0 0 30px rgba(102, 126, 234, 0.2); }
-    .upload-text { color: #a8a8cc; font-size: 1.1rem; margin-top: 1rem; }
-    .upload-highlight { color: #667eea; font-weight: 600; }
     .metric-card {
         background: linear-gradient(135deg, #1e1e3f, #2a2a5a);
         border-radius: 12px; padding: 1.5rem; text-align: center;
@@ -97,26 +87,21 @@ st.markdown("""
         transition: all 0.3s ease !important;
     }
     .stButton > button:hover { transform: scale(1.02) !important; box-shadow: 0 4px 15px rgba(102,126,234,0.4) !important; }
-    [data-testid="stFileUploader"] { 
-        max-width: 600px; margin: 0 auto;
-    }
+    [data-testid="stFileUploader"] { max-width: 600px; margin: 0 auto; }
     [data-testid="stFileUploader"] > div { 
         background: linear-gradient(135deg, #1a1a3e, #2d2b55) !important;
         border: 2px dashed #667eea !important; border-radius: 16px !important;
         padding: 2rem !important;
     }
-    [data-testid="stFileUploader"] label { color: #ffffff !important; text-align: center !important; }
-    [data-testid="stFileUploader"] small { color: #ffffff !important; }
-    [data-testid="stFileUploader"] span { color: #ffffff !important; }
-    .stRadio label { color: #ffffff !important; }
-    .stRadio div[role="radiogroup"] label { color: #ffffff !important; }
-    .stRadio div[role="radiogroup"] div { color: #ffffff !important; }
-    .stDataFrame { border-radius: 8px; overflow: hidden; }
+    [data-testid="stFileUploader"] * { color: #ffffff !important; }
+    [data-testid="stRadio"] * { color: #ffffff !important; }
     [data-testid="stExpander"] { background: #1a1a3e; border-radius: 8px; border: 1px solid #3a3a6a; }
-    [data-testid="stExpander"] summary { color: #ffffff !important; }
+    [data-testid="stExpander"] * { color: #ffffff !important; }
+    .stDataFrame { border-radius: 8px; overflow: hidden; }
     .stSpinner > div { color: #667eea !important; }
     div[data-testid="stInfo"] { background: linear-gradient(135deg, #1a1a3e, #2d2b55); border: 1px solid #3a3a6a; color: #b8b8d4; border-radius: 8px; }
 </style>
+""", unsafe_allow_html=True)
 
 # Header
 st.markdown('<div class="main-header">Funnel Triage Agent</div>', unsafe_allow_html=True)
@@ -178,7 +163,7 @@ if uploaded_file:
     
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
-        st.markdown(f"<p style='text-align:center; color:#b8b8d4;'><strong>{len(df)} deals</strong> loaded successfully</p>", unsafe_allow_html=True)
+        st.markdown(f"<p style='text-align:center; color:#ffffff;'><strong>{len(df)} deals</strong> loaded successfully</p>", unsafe_allow_html=True)
     
     with st.expander("Preview raw data"):
         st.dataframe(df, use_container_width=True, height=200)
@@ -257,8 +242,8 @@ if uploaded_file:
 
 else:
     st.markdown("""
-    <div style="text-align: center; color: #8888aa; margin-top: 2rem;">
+    <div style="text-align: center; color: #ffffff; margin-top: 2rem;">
         <p>Upload a CSV file with your pipeline data to get started.</p>
-        <p style="font-size: 0.85rem;">A sample <code>mock_opportunities.csv</code> is included in this project.</p>
+        <p style="font-size: 0.85rem; color: #b8b8d4;">A sample <code style="color: #667eea;">mock_opportunities.csv</code> is included in this project.</p>
     </div>
     """, unsafe_allow_html=True)
