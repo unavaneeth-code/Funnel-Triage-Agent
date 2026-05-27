@@ -105,13 +105,18 @@ st.markdown("""
         border: 2px dashed #667eea !important; border-radius: 16px !important;
         padding: 2rem !important;
     }
-    [data-testid="stFileUploader"] label { color: #b8b8d4 !important; text-align: center !important; }
+    [data-testid="stFileUploader"] label { color: #ffffff !important; text-align: center !important; }
+    [data-testid="stFileUploader"] small { color: #ffffff !important; }
+    [data-testid="stFileUploader"] span { color: #ffffff !important; }
+    .stRadio label { color: #ffffff !important; }
+    .stRadio div[role="radiogroup"] label { color: #ffffff !important; }
+    .stRadio div[role="radiogroup"] div { color: #ffffff !important; }
     .stDataFrame { border-radius: 8px; overflow: hidden; }
     [data-testid="stExpander"] { background: #1a1a3e; border-radius: 8px; border: 1px solid #3a3a6a; }
+    [data-testid="stExpander"] summary { color: #ffffff !important; }
     .stSpinner > div { color: #667eea !important; }
     div[data-testid="stInfo"] { background: linear-gradient(135deg, #1a1a3e, #2d2b55); border: 1px solid #3a3a6a; color: #b8b8d4; border-radius: 8px; }
 </style>
-""", unsafe_allow_html=True)
 
 # Header
 st.markdown('<div class="main-header">Funnel Triage Agent</div>', unsafe_allow_html=True)
