@@ -4,7 +4,7 @@
 
 A working AI agent that takes a CSV of 10–20 open B2B SaaS deals and returns a prioritized triage with reasoning, risk flags, and suggested next actions for each deal.
 
-**Live URL:** [Streamlit Cloud Deployment]([https://funnel-triage-agent.streamlit.app](https://funnel-triage-agent-iv5yg3xgeutwuzfcwvnarb.streamlit.app/))
+**Live URL:** [Streamlit Cloud Deployment](https://funnel-triage-agent-iv5yg3xgeutwuzfcwvnarb.streamlit.app/)
 
 ---
 
