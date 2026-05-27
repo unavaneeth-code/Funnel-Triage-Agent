@@ -34,7 +34,6 @@ A working AI agent that takes a CSV of 10–20 open B2B SaaS deals and returns a
 - **GPT-4o**: Overkill for this task — 10x more expensive than GPT-4o-mini with marginal quality gain on structured scoring
 - **Claude 3.5 Sonnet**: Excellent reasoning but no native JSON mode enforcement; needs more prompt engineering for output reliability
 - **Gemini 1.5 Flash**: Free tier exists but quota limits are inconsistent across regions/projects
-- **Self-hosted open-source**: Would require infrastructure, defeating the "ship fast" goal
 
 ### System Prompt Design
 
